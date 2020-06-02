@@ -1,0 +1,19 @@
+{
+  "name": "vuex-annotation",
+  "version": "0.2.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/types",
+  "typings": "./dist/types",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "vue": "^2.6.10",
+    "vuex": "^3.0.1"
+  },
+  "keywords": ["vuex", "vuejs", "vue", "vue-decorator", "vuex-annotation", "annotation"],
+  "author": "Tian(2209697714@qq.com)",
+  "license": "ISC"
+}

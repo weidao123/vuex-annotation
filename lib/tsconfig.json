@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declarationDir": "./dist/types",
+    "declaration": true,
+    "target": "esnext",
+    "module": "esnext",
+    "outDir": "./dist"
+  },
+  "include": [
+    "index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
