@@ -1,5 +1,4 @@
-// import { Vuex ,Action, Mutation, Service } from 'vuex-annotation';
-import { Vuex ,Action, Mutation, Service } from '../../lib';
+import { Vuex ,Action, Mutation, Service } from 'vuex-annotation';
 
 @Service({name: 'User'})
 export class User {

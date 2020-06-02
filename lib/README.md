@@ -21,8 +21,10 @@ A plug-in based on vuex, which aims to make vuex cooperate with typescript to ma
 
 ### Example
 
+```markdown
 yarn add vuex-annotation  or  npm install vuex-annotation
-
+add "emitDecoratorMetadata": true, to tsconfig.js
+```
 ```typescript
 // store/modules/User.ts
 import { Vuex ,Action, Mutation, Service } from 'vuex-annotation';
