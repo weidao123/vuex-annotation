@@ -23,7 +23,7 @@ export default class Home extends Vue {
   public users2!: User;
 
   @Autowried()
-  public users!: User;
+  public users: User;
 
   public testActions() {
     this.users.getUserList(1);

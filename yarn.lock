@@ -7389,10 +7389,10 @@ vue@^2.6.10:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
-vuex-annotation@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/vuex-annotation/-/vuex-annotation-0.2.0.tgz#3e624f65bf68e75f83c8af69dae2492139647113"
-  integrity sha512-FdksT/7CoujEhtrlgkaSXZs5ne/KKvZLtUK9CLhEonqXennWKyJoVx6KpPYB0D+3uRNnNz6qq+EPSbM63EGkag==
+vuex-annotation@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/vuex-annotation/-/vuex-annotation-0.4.1.tgz#97024703881f1aa6ddc7b2d6b2f003d7c711c739"
+  integrity sha512-YviB1NSZW39O929AUbaUwY5ME+836UjOxQo+LN9g8RpcDxLTTKttVOSdIXrquOHfotfdr7tmVs8o2d1nmrzc8A==
   dependencies:
     reflect-metadata "^0.1.13"
     vue "^2.6.10"

@@ -27,7 +27,7 @@ add "emitDecoratorMetadata": true, to tsconfig.js
 ```
 ```typescript
 // store/modules/User.ts
-import { Vuex ,Action, Mutation, Service } from 'vuex-annotation';
+import { Main ,Action, Mutation, Service } from 'vuex-annotation';
 
 // This is a module of vuex
 @Service({name: 'User'})
@@ -57,7 +57,7 @@ export class User {
 // store/index.ts
 import {User} from './modules/User';
 
-const instance = new Vuex({
+const instance = new Main({
   modules: [User]  // Just drop the modules to modules
 });
 export const store = instance.createStore();

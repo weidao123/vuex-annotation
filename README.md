@@ -1,26 +1,85 @@
-# vuemvc
 
-## Project setup
+
+# vuex-annotation
+
+###### If you like typescript, you will like it
+
+### Description
+
+A plug-in based on vuex, which aims to make vuex cooperate with typescript to maximize its power
+
+
+
+### API
+
+* Service()
+* Mutation()
+* Action()
+* Autowried() 
+
+
+
+### Example
+
+```markdown
+yarn add vuex-annotation  or  npm install vuex-annotation
+add "emitDecoratorMetadata": true, to tsconfig.js
 ```
-yarn install
+```typescript
+// store/modules/User.ts
+import { Main ,Action, Mutation, Service } from 'vuex-annotation';
+
+// This is a module of vuex
+@Service({name: 'User'})
+export class User {
+
+  // state
+  public age: number = 1;
+
+  // getter
+  public get ageGetter() {
+    return this.age;
+  }
+
+  @Mutation()
+  private setAge() {
+    this.age += 1;
+  }
+
+  @Action()
+  public updateUserInfo(data: any) {
+    this.setAge();
+  }
+}
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
+```typescript
+// store/index.ts
+import {User} from './modules/User';
+
+const instance = new Main({
+  modules: [User]  // Just drop the modules to modules
+});
+export const store = instance.createStore();
 ```
 
-### Compiles and minifies for production
-```
-yarn run build
+**Use in components**
+
+```typescript
+// ...
+import {User} from '@/store';
+
+export default class Home extends Vue {
+
+  @Autowried("User")  // Inject by name
+  public users2!: User;
+
+  @Autowried()  // Inject by type
+  public users!: User;
+
+  public testActions() {
+    this.users.updateUserInfo(1);
+  }
+}
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```

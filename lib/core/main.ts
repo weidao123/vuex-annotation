@@ -1,5 +1,4 @@
-import {ActionTree, GetterTree, MutationTree, Plugin} from 'vuex';
-import vuex from 'vuex';
+import vuex, {ActionTree, GetterTree, MutationTree, Plugin} from 'vuex';
 import Vue from 'vue';
 import { VuexUtil } from './util';
 Vue.use(vuex);
@@ -24,7 +23,7 @@ export class Vuex {
 
   public createStore() {
     const options = this.options;
-    const modules = {};
+    const modules: {[key: string]: object} = {};
     if (this.options.modules) {
       this.options.modules.forEach((module) => {
         const target = VuexUtil.vuexModuleFactory(module);
