@@ -55,9 +55,10 @@ export class User {
 
 ```typescript
 // store/index.ts
+import { Vuex } from 'vuex-annotation';
 import {User} from './modules/User';
 
-const instance = new Main({
+const instance = new Vuex({
   modules: [User]  // Just drop the modules to modules
 });
 export const store = instance.createStore();
