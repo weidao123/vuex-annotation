@@ -2,18 +2,22 @@
   <div class="about">
     <h1>This is an about page</h1>
     <h1>{{ user.name }}</h1>
-    <button @click="user.getUserList()">add</button>
+    <button @click="user.setUserList()">add</button>
   </div>
 </template>
 
 <script lang="ts">
 import {Vue, Component} from 'vue-property-decorator';
-import {User} from '../store';
+import {User} from '../store/User';
 import {Autowried} from 'vuex-annotation';
 
 @Component
 export default class About extends Vue {
   @Autowried()
-  public user!: User
+  public user: User;
+
+  public test(e: Event) {
+
+  }
 }
 </script>

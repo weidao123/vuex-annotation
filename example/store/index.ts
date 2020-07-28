@@ -1,33 +1,8 @@
-import { Vuex ,Action, Mutation, Service } from 'vuex-annotation';
-
-@Service({name: 'User'})
-export class User {
-
-  public name: number = 1;
-
-  // 计算属性
-  public get nameGet() {
-    return this.name;
-  }
-
-  public set nameGet(value: any) {
-    this.name = value;
-  }
-
-  // mutation
-  @Mutation()
-  private setName() {
-    this.name += 1;
-  }
-
-  // action
-  @Action()
-  public getUserList(data: any) {
-    this.setName();
-  }
-}
+import { Vuex } from 'vuex-annotation';
+import {User} from './User';
+import {Order} from './Order';
 
 const instance = new Vuex({
-  modules: [User]
+  modules: [User, Order]
 });
 export const store = instance.createStore();

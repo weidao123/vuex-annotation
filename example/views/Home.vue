@@ -1,6 +1,7 @@
 <template>
   <div class="home">
         {{ users.name }}
+      {{ order.order }}
     <button @click="testActions">add count</button>
   </div>
 </template>
@@ -10,7 +11,8 @@ import { Vue } from 'vue-property-decorator';
 import HelloWorld from '../components/HelloWorld.vue'; // @ is an alias to /src
 import Component from "vue-class-component";
 import {Autowried} from 'vuex-annotation';
-import {User} from '../store';
+import {Order} from '../store/Order';
+import {User} from '../store/User';
 
 @Component({
   components: {
@@ -18,15 +20,13 @@ import {User} from '../store';
   },
 })
 export default class Home extends Vue {
-
-  @Autowried("User")
-  public users2!: User;
-
   @Autowried()
   public users: User;
+  @Autowried()
+  public order: Order;
 
   public testActions() {
-    this.users.getUserList(1);
+    this.users.setUserList();
   }
 }
 
