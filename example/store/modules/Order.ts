@@ -1,4 +1,4 @@
-import {Action, Mutation, Service} from 'vuex-annotation';
+import {Action, Mutation, Service} from '../../../src';
 
 @Service({ name: 'Order' })
 export class Order {

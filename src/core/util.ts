@@ -86,13 +86,15 @@ export class VuexUtil {
       const metadataKeys = Reflect.getMetadataKeys(method);
       const isAction = metadataKeys.includes(DecoratorType.ACTION);
       const isMutation = metadataKeys.includes(DecoratorType.MUTATION);
+
+      // 使用原始的vuex action 或者 mutations 这里才会被执行
       if (isAction) {
         modules.actions[name] = (params: any, payload: any = {}) => {
-          instance[name](payload);
+          instance[name](params, payload);
         };
       } else if (isMutation) {
         modules.mutations[name] = (state: any, payload: any) => {
-          instance[name](payload);
+          instance[name](state, payload);
         }
       }
     });

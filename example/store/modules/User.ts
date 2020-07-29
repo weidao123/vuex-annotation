@@ -1,8 +1,10 @@
-import {Action, Autowried, Mutation, Service} from 'vuex-annotation';
+import {Action, Autowried, Service} from '../../../src';
 import { Order } from './Order';
+import {BaseStore} from '../../../src/core/BaseStore';
+import {State} from '@/store/state';
 
 @Service({name: 'User'})
-export class User {
+export class User extends BaseStore<State> {
 
   @Autowried("Order")
   private order: Order;
@@ -18,16 +20,10 @@ export class User {
     this.name = value;
   }
 
-  // mutation
-  @Mutation()
-  private setName() {
-    this.name += 1;
-  }
-
   // action
   @Action()
-  public setUserList() {
-    this.setName();
-    console.log();
+  public setUserList(): void {
+    this.name += 1;
+    console.log(this.getRootState().User.name);
   }
 }

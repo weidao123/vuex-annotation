@@ -1,6 +1,6 @@
-import { Vuex } from 'vuex-annotation';
-import {User} from './User';
-import {Order} from './Order';
+import { Vuex } from '../../src';
+import {User} from './modules/User';
+import {Order} from './modules/Order';
 
 const instance = new Vuex({
   modules: [User, Order]

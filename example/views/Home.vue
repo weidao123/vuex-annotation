@@ -8,11 +8,11 @@
 
 <script lang="ts">
 import { Vue } from 'vue-property-decorator';
-import HelloWorld from '../components/HelloWorld.vue'; // @ is an alias to /src
+import HelloWorld from '../components/HelloWorld.vue';
 import Component from "vue-class-component";
-import {Autowried} from 'vuex-annotation';
-import {Order} from '../store/Order';
-import {User} from '../store/User';
+import {Autowried} from '../../src';
+import {Order} from '../store/modules/Order';
+import {User} from '../store/modules/User';
 
 @Component({
   components: {
