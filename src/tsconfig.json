@@ -16,7 +16,13 @@
     "allowUmdGlobalAccess": true, // 允许在模块中全局变量的方式访问umd模块
     "target": "es5",
     "module": "commonjs",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.iterable"
+    ]
   },
   "include": ["index.ts"]
 }

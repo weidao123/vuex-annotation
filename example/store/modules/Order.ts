@@ -5,15 +5,10 @@ export class Order {
 
   public order: number = 100;
 
-  // mutation
-  @Mutation()
-  private updateOrder() {
-    this.order += 100;
-  }
-
   // action
   @Action()
-  public setOrder() {
-    this.updateOrder();
+  public setOrder(num: number) {
+    this.order -= num;
   }
+
 }

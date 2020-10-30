@@ -1,29 +1,20 @@
-import {Action, Autowried, Service} from '../../../src';
-import { Order } from './Order';
-import {BaseStore} from '../../../src/core/BaseStore';
-import {State} from '@/store/state';
+import {Action, getModule, Service} from '../../../src';
+import {Order} from "./Order";
 
-@Service({name: 'User'})
-export class User extends BaseStore<State> {
+@Service({name: 'User', namespaced: false})
+export class User {
 
-  @Autowried("Order")
-  private order: Order;
-
-  public name: number = 1;
+  public age: number = 1;
 
   // 计算属性
-  public get nameGet() {
-    return this.name;
-  }
-
-  public set nameGet(value: any) {
-    this.name = value;
+  public get computedAge() {
+    return this.age * 100;
   }
 
   // action
   @Action()
-  public setUserList(): void {
-    this.name += 1;
-    console.log(this.getRootState().User.name);
+  public addAge(num: number): void {
+    getModule(Order).setOrder(num);
+    this.age += num;
   }
 }

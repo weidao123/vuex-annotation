@@ -1,4 +1,8 @@
-class IOCContainer {
+/**
+ * 储存所有模块的容器
+ */
+class Container {
+
   private container: {[key: string]: any} = {};
 
   public add(name: string, target: any) {
@@ -18,8 +22,8 @@ class IOCContainer {
         return this.container[key];
       }
     }
-    throw new Error(type + '未注册');
+    throw new Error(type.name + '未注册');
   }
 }
 
-export default new IOCContainer();
+export default new Container();
