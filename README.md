@@ -8,7 +8,9 @@
 
 A plug-in based on vuex, which aims to make vuex cooperate with typescript to maximize its power
 
+Have the ultimate typescript development experience
 
+Make development easier
 
 ### API
 
@@ -16,8 +18,6 @@ A plug-in based on vuex, which aims to make vuex cooperate with typescript to ma
 * Mutation()
 * Action()
 * Autowried() 
-
-
 
 ### Example
 

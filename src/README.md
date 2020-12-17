@@ -8,7 +8,9 @@
 
 A plug-in based on vuex, which aims to make vuex cooperate with typescript to maximize its power
 
+Have the ultimate typescript development experience
 
+Make development easier
 
 ### API
 
@@ -16,8 +18,6 @@ A plug-in based on vuex, which aims to make vuex cooperate with typescript to ma
 * Mutation()
 * Action()
 * Autowried() 
-
-
 
 ### Example
 
@@ -55,9 +55,10 @@ export class User {
 
 ```typescript
 // store/index.ts
+import { Vuex } from 'vuex-annotation';
 import {User} from './modules/User';
 
-const instance = new Main({
+const instance = new Vuex({
   modules: [User]  // Just drop the modules to modules
 });
 export const store = instance.createStore();
